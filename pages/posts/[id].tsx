@@ -2,14 +2,14 @@ import { getAllPostIds, getPostData, getSortedPostsData } from "@/lib/post";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
-
+import PostStyles from "../../styles/Post.module.css";
 const Post = ({
   postData,
 }: {
   postData: { title: string; date: string; contentHtml: string };
 }) => {
   return (
-    <div>
+    <div className={PostStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
